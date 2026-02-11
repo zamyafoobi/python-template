@@ -5,6 +5,7 @@
 2. After implementing functionality or resolving problems, run validation (tests, lint, type checking) per the commands in CLAUDE.md. If functionality is missing then it's your job to add it as per the application specifications.
 3. When you discover issues, immediately update @IMPLEMENTATION_PLAN.md with your findings using a subagent. When resolved, update and remove the item.
 4. When validation passes, update @IMPLEMENTATION_PLAN.md (including the verification log with what you tested and the result), then stage the specific files you changed, commit with a message describing the changes, and `git push`.
+5. After committing, check @IMPLEMENTATION_PLAN.md. If ALL items are complete and no work remains, create a file `.build-complete` in the project root (contents don't matter) and stop. Do not begin new work.
 
 RULES (higher number = higher priority):
 
