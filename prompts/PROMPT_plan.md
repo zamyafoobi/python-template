@@ -1,17 +1,10 @@
-0. Use parallel Explore agents to study `specs/*` and learn the application specifications.
+0a. Study `specs/*` with parallel fast subagents to learn the application specifications.
+0b. Study @IMPLEMENTATION_PLAN.md (if present) to understand the plan so far.
+0c. Study `src/lib/*` with parallel fast subagents to understand shared utilities & components.
+0d. For reference, the application source code is in `src/*`.
 
-1. Study @IMPLEMENTATION_PLAN.md (if present; it may be incorrect) and use parallel Explore agents to study existing source code and compare it against `specs/*`. Use a general-purpose agent to analyze findings and create/update @IMPLEMENTATION_PLAN.md. Consider searching for TODO, minimal implementations, placeholders, skipped/flaky tests, and inconsistent patterns. Mark items as complete or incomplete based on what you find in the code.
+1. Study @IMPLEMENTATION_PLAN.md (if present; it may be incorrect) and use parallel fast subagents to study existing source code in `src/*` and compare it against `specs/*`. Use a subagent with complex reasoning to analyze findings, prioritize tasks, and create/update @IMPLEMENTATION_PLAN.md as a bullet point list sorted in priority of items yet to be implemented. Ultrathink. Consider searching for TODO, minimal implementations, placeholders, skipped/flaky tests, and inconsistent patterns. Study @IMPLEMENTATION_PLAN.md to determine starting point for research and keep it up to date with items considered complete/incomplete using subagents.
 
-IMPORTANT: Plan only. Do NOT implement anything. Always verify against code — never assume a feature is or isn't implemented without searching first.
+IMPORTANT: Plan only. Do NOT implement anything. Do NOT assume functionality is missing; confirm with code search first. Treat `src/lib` as the project's standard library for shared utilities and components. Prefer consolidated, idiomatic implementations there over ad-hoc copies.
 
-2. Structure @IMPLEMENTATION_PLAN.md as follows:
-
-   - **Quick reference table** at the top mapping each major system to its spec, code location, and current status — so the build loop can orient fast.
-
-   - **Phased organization.** Group related work into numbered phases with a short goal statement (e.g., "Phase 3: API Endpoints"). Within each phase, use checkbox items grouped by component or directory. For projects with distinct major features, give each feature its own phase sequence — this lets them progress independently.
-
-   - **Verification log** section at the bottom (initially empty). The build loop will append dated entries here as it validates work.
-
-   - **Summary table** at the end — one row per phase with its status (Pending / In Progress / Complete).
-
-   Keep items concise. Don't over-specify implementation details — the specs already do that. The plan tracks *what remains* and *what's been confirmed working*.
+ULTIMATE GOAL: We want to achieve [project-specific goal]. Consider missing elements and plan accordingly. If an element is missing, search first to confirm it doesn't exist, then if needed author the specification at specs/FILENAME.md. If you create a new element then document the plan to implement it in @IMPLEMENTATION_PLAN.md using a subagent.
